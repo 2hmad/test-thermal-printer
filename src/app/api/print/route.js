@@ -3,7 +3,7 @@ import { PrinterTypes, ThermalPrinter } from "node-thermal-printer";
 export async function POST(res) {
   let printer = new ThermalPrinter({
     type: PrinterTypes.EPSON,
-    interface: "printer interface",
+    interface: "tcp://192.168.1.100",
     options: {
       timeout: 5000,
     },
