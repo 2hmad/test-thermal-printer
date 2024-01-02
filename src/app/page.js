@@ -1,11 +1,13 @@
 "use client";
 
-export const dynamic = "force-dynamic";
 export default function Home() {
   const testPrinter = async () => {
-    const res = await fetch("/api/print", {
-      method: "POST",
-    });
+    const res = await fetch(
+      "https://test-pos-printer-backend.vercel.app/api/print",
+      {
+        method: "POST",
+      }
+    );
     console.log(res);
   };
 
